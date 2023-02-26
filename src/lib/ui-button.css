@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .font-sans {
+        font-family: 'Inter', sans-serif;
+    }
+}
+
+@layer components {
+
+    .button-text-on-light {
+        @apply text-slate-800 group-hover:text-slate-700;
+    }
+
+    .button-text-on-dark {
+        @apply text-slate-800 group-hover:text-slate-600;
+    }
+
+    .button-primary {
+        @apply text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500;
+    }
+    .button-secondary {
+        @apply text-slate-800 bg-indigo-200 hover:bg-indigo-300 focus:ring-indigo-100;
+    }
+    .button-danger {
+        @apply text-white bg-rose-600 hover:bg-rose-700 focus:ring-rose-500;
+    }
+    .button-success {
+        @apply text-white bg-emerald-600 hover:bg-emerald-700 focus:ring-emerald-500;
+    }
+    .button-warning {
+        @apply text-white bg-amber-600 hover:bg-amber-700 focus:ring-amber-500;
+    }
+    .button-info {
+        @apply text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-cyan-500;
+    }
+}
