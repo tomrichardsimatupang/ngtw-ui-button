@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .button-text-on-light {
+        @apply text-slate-800 group-hover:text-slate-700;
+    }
+    .button-text-on-dark {
+        @apply text-slate-800 group-hover:text-slate-600;
+    }
+    .button-primary {
+        @apply text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 border border-transparent;
+    }
+    .button-secondary {
+        @apply text-slate-800 bg-indigo-200 hover:bg-indigo-300 focus:ring-indigo-100 border border-transparent;
+    }
+    .button-danger {
+        @apply text-white bg-rose-600 hover:bg-rose-700 focus:ring-rose-500 border border-transparent;
+    }
+    .button-success {
+        @apply text-white bg-emerald-600 hover:bg-emerald-700 focus:ring-emerald-500 border border-transparent;
+    }
+    .button-warning {
+        @apply text-white bg-amber-600 hover:bg-amber-700 focus:ring-amber-500 border border-transparent;
+    }
+    .button-info {
+        @apply text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-cyan-500 border border-transparent;
+    }
+
+    .button-primary-outline {
+        @apply text-indigo-600 border border-indigo-600 bg-transparent hover:bg-indigo-200; /*hover:bg-indigo-700 focus:ring-indigo-500*/
+    }
+    .button-secondary-outline {
+        @apply text-slate-800 border border-indigo-300 bg-transparent hover:bg-indigo-200;
+    }
+    .button-danger-outline {
+        @apply text-rose-600 border border-rose-600 bg-transparent hover:bg-rose-200;
+    }
+    .button-success-outline {
+        @apply text-emerald-600 border border-emerald-600 bg-transparent hover:bg-emerald-200;
+    }
+    .button-warning-outline {
+        @apply text-amber-600 border border-amber-600 bg-transparent hover:bg-amber-200;
+    }
+    .button-info-outline {
+        @apply text-cyan-600 border border-cyan-600 bg-transparent hover:bg-cyan-200;
+    }
+
+    ::ng-deep .button-elevated {
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+    }
+
+    ::ng-deep .button-rounded {
+        @apply rounded-full px-5 !important;
+    }
+
+    ::ng-deep svg.icon-for-button {
+        width: 1.25rem;
+        height: 1.25rem;
+        color: inherit;
+    }
+
+}

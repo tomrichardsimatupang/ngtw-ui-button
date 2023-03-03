@@ -1,11 +1,29 @@
 {
-  "name": "ui-button",
-  "version": "0.0.1",
+  "name": "@tomrichardsimatupang/ui-button",
+  "version": "0.0.12",
   "peerDependencies": {
     "@angular/common": "^14.2.0",
     "@angular/core": "^14.2.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
-  }
+  },
+  "description": "This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.0.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomrichardsimatupang/ngtw-ui-button.git"
+  },
+  "keywords": [
+    "Angular",
+    "Tailwinds",
+    "UI",
+    "Button"
+  ],
+  "author": "Tom Richard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomrichardsimatupang/ngtw-ui-button/issues"
+  },
+  "homepage": "https://github.com/tomrichardsimatupang/ngtw-ui-button#readme"
 }

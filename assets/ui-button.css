@@ -1,23 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer utilities {
-    .font-sans {
-        font-family: 'Inter', sans-serif;
-    }
-}
-
 @layer components {
-
     .button-text-on-light {
         @apply text-slate-800 group-hover:text-slate-700;
     }
-
     .button-text-on-dark {
         @apply text-slate-800 group-hover:text-slate-600;
     }
-
     .button-primary {
         @apply text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500;
     }

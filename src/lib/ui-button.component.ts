@@ -6,13 +6,14 @@ import { Icon } from './ui-icon';
   selector: 'ui-button',
   template: `
     <button [type]="type" class="group relative flex justify-center items-center
-      rounded-md border border-transparent py-2 px-4 font-medium 
+      py-2 px-4 font-medium 
       focus:outline-none focus:ring-2 focus:ring-offset-2" [ngClass]="_addClass">
       <span class="flex items-center pr-2" [innerHTML]="_htmlIcon" *ngIf="_useIcon"></span>
       <ng-content></ng-content>
     </button>
   `,
-  styleUrls: ["./ui-button.css"]
+  //styleUrls: ["./ui-button.component.compiled.css"],
+  styleUrls: ["./ui-button.component.css"]
 })
 export class UiButtonComponent implements OnInit {
 
@@ -43,7 +44,9 @@ export class UiButtonComponent implements OnInit {
     'button-primary': true
   }
 
-  classIconColor: any = 'text-grey-50 group-hover:text-grey-200';
+  classRounded: any = {
+    'rounded-md': true
+  }
 
   /** 
    * =========================
@@ -58,11 +61,24 @@ export class UiButtonComponent implements OnInit {
     const key = Object.keys(this._icon).find( (k) => k === value );
     if(key) {
       this._useIcon = true;
-      this._htmlIcon = this.sanitizer.bypassSecurityTrustHtml(this._icon[key].mini.replace(/\:class\:/gi, this.classIconColor));
+      this._htmlIcon = this.sanitizer.bypassSecurityTrustHtml(this._icon[key].mini.replace(/\:class\:/gi, 'icon-for-button'));
     }else {
       this._useIcon = false;
       this._htmlIcon = "";
     }
+  }
+
+  @Input() set rounded( yes: boolean ) {
+    if( yes ) {
+      this.classRounded = {
+        'button-rounded': true
+      }
+    }else {
+      this.classRounded = {
+        'rounded-md': true
+      }
+    }
+    this.updateClass();
   }
   
   @Input() set width( value: string ) {
@@ -80,13 +96,13 @@ export class UiButtonComponent implements OnInit {
       case "lg": 
         this.classSize = {
           'h-12': true,
-          'text-md': true
+          'text-lg': true
         }
         break;
       case "xl":
         this.classSize = {
           'h-14': true,
-          'text-lg': true
+          'text-xl': true
         }
         break;
       default:
@@ -106,48 +122,96 @@ export class UiButtonComponent implements OnInit {
         this.classColor = {
           'button-primary': true
         }
-        this.classIconColor = {
-          'button-text-on-dark': true
-        }
         break;
       case "secondary":
         this.classColor = {
           'button-secondary': true
-        }
-        this.classIconColor = {
-          'button-text-on-light': true
         }
         break;
       case "danger":
         this.classColor = {
           'button-danger': true
         }
-        this.classIconColor = {
-          'button-text-on-dark': true
-        }
         break;
       case "success":
         this.classColor = {
           'button-success': true
-        }
-        this.classIconColor = {
-          'button-text-on-dark': true
         }
         break;
       case "warning":
         this.classColor = {
           'button-warning': true
         }
-        this.classIconColor = {
-          'button-text-on-dark': true
-        }
         break;
       case "info":
         this.classColor = {
           'button-info': true
         }
-        this.classIconColor = {
-          'button-text-on-dark': true
+        break;
+      case "primary-outline":
+        this.classColor = {
+          'button-primary-outline': true
+        }
+        break;
+      case "secondary-outline":
+        this.classColor = {
+          'button-secondary-outline': true
+        }
+        break;
+      case "danger-outline":
+        this.classColor = {
+          'button-danger-outline': true
+        }
+        break;
+      case "success-outline":
+        this.classColor = {
+          'button-success-outline': true
+        }
+        break;
+      case "warning-outline":
+        this.classColor = {
+          'button-warning-outline': true
+        }
+        break;
+      case "info-outline":
+        this.classColor = {
+          'button-info-outline': true,
+        }
+        break;
+      case "primary-elevated":
+        this.classColor = {
+          'button-primary': true,
+          'button-elevated': true
+        }
+        break;
+      case "secondary-elevated":
+        this.classColor = {
+          'button-secondary': true,
+          'button-elevated': true
+        }
+        break;
+      case "danger-elevated":
+        this.classColor = {
+          'button-danger': true,
+          'button-elevated': true
+        }
+        break;
+      case "success-elevated":
+        this.classColor = {
+          'button-success': true,
+          'button-elevated': true
+        }
+        break;
+      case "warning-elevated":
+        this.classColor = {
+          'button-warning': true,
+          'button-elevated': true
+        }
+        break;
+      case "info-elevated":
+        this.classColor = {
+          'button-info': true,
+          'button-elevated': true
         }
         break;
       default:
@@ -169,28 +233,12 @@ export class UiButtonComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createColor( color:string, onDark: boolean = true ) {
-
-    const onDarkIcon  = 'text-grey-50 group-hover:text-grey-200';
-    const onLightIcon = 'text-slate-800 group-hover:text-slate-600';
-    const changeColor: any = {}; 
-
-    changeColor['text-white'] = true;
-    changeColor[`bg-${color}-600`] = true;
-    changeColor[`hover:bg-${color}-700`] = true;
-    changeColor[`focus:ring-${color}-500`] = true;
-
-    this.classColor = changeColor;
-
-    this.classIconColor = onDark ? onDarkIcon:onLightIcon;
-
-  }
-
   updateClass() {
     this._addClass = {
       ...this.classWidth,
       ...this.classSize,
-      ...this.classColor
+      ...this.classColor,
+      ...this.classRounded
     }
   }
 
