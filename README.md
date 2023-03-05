@@ -2,23 +2,83 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.0.
 
-## Code scaffolding
+### Color
 
-Run `ng generate component component-name --project ui-button` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ui-button`.
-> Note: Don't forget to add `--project ui-button` or else it will be added to the default project in your `angular.json` file. 
+| color     |
+|-----------|
+| primary   |
+| secondary |
+| danger    |
+| success   |
+| warning   |
+| info      |
 
-## Build
+```html
+<ui-button color="primary">Button Primary</ui-button>
+```
 
-Run `ng build ui-button` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Outline
 
-## Publishing
+| color             |
+|-------------------|
+| primary-outline   |
+| secondary-outline |
+| danger-outline    |
+| success-outline   |
+| warning-outline   |
+| info-outline      |
 
-After building your library with `ng build ui-button`, go to the dist folder `cd dist/ui-button` and run `npm publish`.
+```html
+<ui-button color="primary-outline">Button Primary Outline</ui-button>
+```
 
-## Running unit tests
+#### Elevated
 
-Run `ng test ui-button` to execute the unit tests via [Karma](https://karma-runner.github.io).
+| color              |
+|--------------------|
+| primary-elevated   |
+| secondary-elevated |
+| danger-elevated    |
+| success-elevated   |
+| warning-elevated   |
+| info-elevated      |
 
-## Further help
+```html
+<ui-button color="primary-elevated">Button Primary Elevated</ui-button>
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Round
+
+```
+[rounded] = "true | false"
+```
+
+```html
+<ui-button color="primary" [rounded]="true">Button Primary Round</ui-button>
+```
+
+### Width
+
+```html
+<ui-button color="primary" width="full">Button Full Width</ui-button>
+```
+
+### Size
+
+```html
+<ui-button color="primary">Button Default</ui-button>
+
+<ui-button color="primary" size="lg">Button L</ui-button>
+
+<ui-button color="primary" size="xl">Button XL</ui-button>
+```
+
+### Button with icon
+
+```html
+<ui-button color="primary" icon="lock-closed">Button Icon</ui-button>
+```
+
+icon using hero icon check official website here https://heroicons.com/
+
+
