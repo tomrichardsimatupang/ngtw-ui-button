@@ -10,41 +10,53 @@
         @apply text-slate-800 group-hover:text-slate-600;
     }
     .button-primary {
-        @apply text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 border border-transparent;
+        @apply text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 border border-transparent 
+        disabled:text-gray-400 disabled:bg-gray-300;
     }
     .button-secondary {
-        @apply text-slate-800 bg-indigo-200 hover:bg-indigo-300 focus:ring-indigo-100 border border-transparent;
+        @apply text-slate-800 bg-indigo-200 hover:bg-indigo-300 focus:ring-indigo-100 border border-transparent
+        disabled:text-gray-400 disabled:bg-gray-300;
     }
     .button-danger {
-        @apply text-white bg-rose-600 hover:bg-rose-700 focus:ring-rose-500 border border-transparent;
+        @apply text-white bg-rose-600 hover:bg-rose-700 focus:ring-rose-500 border border-transparent
+        disabled:text-gray-400 disabled:bg-gray-300;
     }
     .button-success {
-        @apply text-white bg-emerald-600 hover:bg-emerald-700 focus:ring-emerald-500 border border-transparent;
+        @apply text-white bg-emerald-600 hover:bg-emerald-700 focus:ring-emerald-500 border border-transparent
+        disabled:text-gray-400 disabled:bg-gray-300;
     }
     .button-warning {
-        @apply text-white bg-amber-600 hover:bg-amber-700 focus:ring-amber-500 border border-transparent;
+        @apply text-white bg-amber-600 hover:bg-amber-700 focus:ring-amber-500 border border-transparent
+        disabled:text-gray-400 disabled:bg-gray-300;
     }
     .button-info {
-        @apply text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-cyan-500 border border-transparent;
+        @apply text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-cyan-500 border border-transparent
+        disabled:text-gray-400 disabled:bg-gray-300;
     }
 
     .button-primary-outline {
-        @apply text-indigo-600 border border-indigo-600 bg-transparent hover:bg-indigo-200; /*hover:bg-indigo-700 focus:ring-indigo-500*/
+        @apply text-indigo-600 border border-indigo-600 bg-transparent hover:bg-indigo-200
+        disabled:text-gray-400 disabled:border-gray-300 disabled:bg-transparent;
     }
     .button-secondary-outline {
-        @apply text-slate-800 border border-indigo-300 bg-transparent hover:bg-indigo-200;
+        @apply text-slate-800 border border-indigo-300 bg-transparent hover:bg-indigo-200
+        disabled:text-gray-400 disabled:border-gray-300 disabled:bg-transparent;
     }
     .button-danger-outline {
-        @apply text-rose-600 border border-rose-600 bg-transparent hover:bg-rose-200;
+        @apply text-rose-600 border border-rose-600 bg-transparent hover:bg-rose-200
+        disabled:text-gray-400 disabled:border-gray-300 disabled:bg-transparent;
     }
     .button-success-outline {
-        @apply text-emerald-600 border border-emerald-600 bg-transparent hover:bg-emerald-200;
+        @apply text-emerald-600 border border-emerald-600 bg-transparent hover:bg-emerald-200
+        disabled:text-gray-400 disabled:border-gray-300 disabled:bg-transparent;
     }
     .button-warning-outline {
-        @apply text-amber-600 border border-amber-600 bg-transparent hover:bg-amber-200;
+        @apply text-amber-600 border border-amber-600 bg-transparent hover:bg-amber-200
+        disabled:text-gray-400 disabled:border-gray-300 disabled:bg-transparent;
     }
     .button-info-outline {
-        @apply text-cyan-600 border border-cyan-600 bg-transparent hover:bg-cyan-200;
+        @apply text-cyan-600 border border-cyan-600 bg-transparent hover:bg-cyan-200
+        disabled:text-gray-400 disabled:border-gray-300 disabled:bg-transparent;
     }
 
     ::ng-deep .button-elevated {
