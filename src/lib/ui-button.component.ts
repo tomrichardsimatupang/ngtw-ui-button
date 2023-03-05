@@ -12,8 +12,7 @@ import { Icon } from './ui-icon';
       <ng-content></ng-content>
     </button>
   `,
-  //styleUrls: ["./ui-button.component.compiled.css"],
-  styleUrls: ["./ui-button.component.css"]
+  styleUrls: ["./ui-button.component.compiled.css"],
 })
 export class UiButtonComponent implements OnInit {
 
