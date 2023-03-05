@@ -7,7 +7,7 @@ import { Icon } from './ui-icon';
   template: `
     <button [type]="type" class="group relative flex justify-center items-center
       py-2 px-4 font-medium 
-      focus:outline-none focus:ring-2 focus:ring-offset-2" [ngClass]="_addClass">
+      focus:outline-none focus:ring-2 focus:ring-offset-2" [ngClass]="_addClass" [disabled]="disabled">
       <span class="flex items-center pr-2" [innerHTML]="_htmlIcon" *ngIf="_useIcon"></span>
       <ng-content></ng-content>
     </button>
@@ -55,6 +55,8 @@ export class UiButtonComponent implements OnInit {
    */
 
   @Input() type = "button";
+
+  @Input() disabled = false;
 
   @Input() set icon( value: string ) {
     this._icon_selected = value;

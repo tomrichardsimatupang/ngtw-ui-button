@@ -1,6 +1,6 @@
 {
   "name": "@tomrichardsimatupang/ui-button",
-  "version": "0.0.12",
+  "version": "1.0.1",
   "peerDependencies": {
     "@angular/common": "^14.2.0",
     "@angular/core": "^14.2.0"
